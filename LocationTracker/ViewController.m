@@ -2,12 +2,17 @@
 //  ViewController.m
 //  LocationTracker
 //
-//  Created by Mike Limestro on 7/11/16.
-//  Copyright © 2016 Mike Lapuebla. All rights reserved.
+//  Created by Michael Lapuebla on 7/11/16.
+//  Copyright © 2016 Michael Lapuebla. All rights reserved.
 //
 
 #import "ViewController.h"
 #import <CoreLocation/CoreLocation.h>
+
+#define kPLRFillColor       [[UIColor redColor] colorWithAlphaComponent:0.2]
+#define kPLRStrokeColor     [[UIColor redColor] colorWithAlphaComponent:0.7]
+#define kPLRLineWidth       2.0
+
 
 @interface ViewController ()
 
@@ -71,9 +76,9 @@
 {
     if([overlay isKindOfClass:[MKPolyline class]]) {
         MKPolylineRenderer *polylineRenderer = [[MKPolylineRenderer alloc] initWithPolyline:overlay];
-        polylineRenderer.fillColor = [[UIColor redColor] colorWithAlphaComponent:0.2];
-        polylineRenderer.strokeColor = [[UIColor redColor] colorWithAlphaComponent:0.7];
-        polylineRenderer.lineWidth = 2.0;
+        polylineRenderer.fillColor = kPLRFillColor;
+        polylineRenderer.strokeColor = kPLRStrokeColor;
+        polylineRenderer.lineWidth = kPLRLineWidth;
         return polylineRenderer;
     }
     else {

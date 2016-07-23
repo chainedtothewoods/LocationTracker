@@ -2,8 +2,8 @@
 //  AppDelegate.m
 //  LocationTracker
 //
-//  Created by Mike Limestro on 7/11/16.
-//  Copyright © 2016 Mike Lapuebla. All rights reserved.
+//  Created by Michael Lapuebla on 7/11/16.
+//  Copyright © 2016 Michael Lapuebla. All rights reserved.
 //
 
 #import "AppDelegate.h"
@@ -56,7 +56,7 @@
     
     _locationManager = [[CLLocationManager alloc] init];        // Create Location Manager Instance
     _locationManager.delegate = self;                           // Set Delegate
-    _locationManager.distanceFilter = 50.0;                      // 10 meters
+    _locationManager.distanceFilter = 10.0;                     // 10 meters
     
     
     CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
